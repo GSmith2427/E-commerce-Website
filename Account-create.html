@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Home Page</title>
+	<link href="stylesheet" href="style.css" type="text/css">
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position:sticky;
+			overflow: hidden;
+			top: 0;
+			cursor: pointer;
+			height: 100px;
+		}
+
+		.background {
+			background: rgb(0, 0, 0);
+			background-blend-mode: darken;
+			background-size:cover;
+			background-position: center;
+			z-index: 1;
+		}
+
+		.nav-list {
+			width: 75%;
+			display: flex;
+			align-items: center;
+			font-size: large;
+		}
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 50px;
+			border-radius: 50px;
+		}
+
+		.nav-list li {
+			list-style: none; 
+			padding: 29px 30px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: rgb(255, 255, 255);
+			font-family: monospace;
+            
+		}
+
+		.nav-list li a:hover {
+			color: grey;
+		}
+
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+		#search {
+			padding: 5px;
+			font-size: 17px;
+			border: 2px solid grey;
+			border-radius: 9px;
+		}
+
+        * {box-sizing: border-box}
+
+/* Add padding to containers */
+        .container {
+            padding: 16px;
+        }
+
+/* Full-width input fields */
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #d5d4d4;
+        }
+
+        input[type=text]:focus, input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+/* Overwrite default styles of hr */
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+/* Set a style for the submit/register button */
+        .registerbtn {
+            background-color: #04AA6D;
+            color: rgb(234, 234, 234);
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .registerbtn:hover {
+            opacity:1;
+        }
+
+/* Add a blue text color to links */
+        a {
+            color: dodgerblue;
+        }
+
+/* Set a grey background color and center the text of the "sign in" section */
+        .signin {
+            background-color: #dcdcdc;
+            text-align: center;
+        }
+
+		.text-footer {
+			text-align: center;
+			padding: 20px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: rgb(255, 255, 255);
+		}
+	</style>
+</head>
+
+<body>
+
+    <nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKb3xr7PQNNf1IfbT4XhspQ5aTHMCnFxzZQg&usqp=CAU">
+			</div>
+			<li><a href="#Home">Home</a></li>
+			<li><a href="#men">Men</a></li>
+			<li><a href="#women">Women</a></li>
+            <li><a href="#about">About Us</a></li>
+		</ul>
+
+		<div class="rightNav">
+			<input type="text" name="search" id="search">
+			<button class="btn btn-sm">Search</button>
+		</div>
+	</nav>
+
+
+        <div class="container">
+            <h1>Register</h1>
+            <p>Let the inner Zyzz in you join our army.</p>
+            <hr>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+            <hr>
+
+            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+            <button type="submit" class="registerbtn">Register</button>
+        </div>
+
+        <div class="container signin">
+            <p>Already have an account? <a href="#">Sign in</a>.</p>
+        </div>
+
+	<footer class="background">
+		<p class="text-footer">
+			
+		</p>
+
+
+	</footer>
+</body>
+
+</html>

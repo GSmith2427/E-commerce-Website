@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Home Page</title>
+	<link href="stylesheet" href="style.css" type="text/css">
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position:sticky;
+			overflow: hidden;
+			top: 0;
+			cursor: pointer;
+			height: 100px;
+		}
+
+		.background {
+			background: rgb(0, 0, 0);
+			background-blend-mode: darken;
+			background-size:cover;
+			background-position: center;
+			z-index: 1;
+		}
+
+		.nav-list {
+			width: 75%;
+			display: flex;
+			align-items: center;
+			font-size: large;
+		}
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 50px;
+			border-radius: 50px;
+		}
+
+		.nav-list li {
+			list-style: none; 
+			padding: 29px 30px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: rgb(255, 255, 255);
+			font-family: monospace;
+            
+		}
+
+		.nav-list li a:hover {
+			color: grey;
+		}
+
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+		#search {
+			padding: 5px;
+			font-size: 17px;
+			border: 2px solid grey;
+			border-radius: 9px;
+		}
+
+        * {
+            box-sizing: border-box;
+        }
+
+/* Style inputs */
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+/* Style the container/contact section */
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+/* Create two columns that float next to eachother */
+        .column {
+            float: left;
+            width: 50%;
+            margin-top: 6px;
+            padding: 20px;
+        }
+
+/* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column, input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+
+		.text-footer {
+			text-align: center;
+			padding: 20px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: rgb(255, 255, 255);
+		}
+	</style>
+</head>
+
+<body>
+    <nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKb3xr7PQNNf1IfbT4XhspQ5aTHMCnFxzZQg&usqp=CAU">
+			</div>
+			<li><a href="#Home">Home</a></li>
+			<li><a href="#men">Men</a></li>
+			<li><a href="#women">Women</a></li>
+            <li><a href="#about">About Us</a></li>
+		</ul>
+
+		<div class="rightNav">
+			<input type="text" name="search" id="search">
+			<button class="btn btn-sm">Search</button>
+		</div>
+	</nav>
+
+    <div class="container">
+        <div style="text-align:center">
+            <h2>Contact Us</h2>
+            <p>Help us improve our service Ya Absolute Beaut!</p>
+        </div>
+        <div class="row">
+            <div class="column">
+            </div>
+            <div class="column">
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="Email">Email</label>
+                <input type="text" id="Email" name="Email" placeholder="Email..">
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+            </div>
+        </div>
+        </div>
+
+	<footer class="background">
+		<p class="text-footer">
+			
+		</p>
+
+
+	</footer>
+</body>
+
+</html>

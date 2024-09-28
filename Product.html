@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Product Page</title>
+	<link href="stylesheet" href="style.css" type="text/css">
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position:sticky;
+			overflow: hidden;
+			top: 0;
+			cursor: pointer;
+			height: 100px;
+		}
+
+		.background {
+			background: rgb(0, 0, 0);
+			background-blend-mode: darken;
+			background-size:cover;
+			background-position: center;
+			z-index: 1;
+		}
+
+		.nav-list {
+			width: 75%;
+			display: flex;
+			align-items: center;
+			font-size: large;
+		}
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 50px;
+			border-radius: 50px;
+		}
+
+		.nav-list li {
+			list-style: none; 
+			padding: 29px 30px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: rgb(255, 255, 255);
+			font-family: monospace;
+            
+		}
+
+		.nav-list li a:hover {
+			color: grey;
+		}
+
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+		#search {
+			padding: 5px;
+			font-size: 17px;
+			border: 2px solid grey;
+			border-radius: 9px;
+		}
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            max-height: 400px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .price {
+            color: grey;
+            font-size: 22px;
+        }
+
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        .card button:hover {
+            opacity: 0.7;
+        }
+
+		.firstsection {
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        
+		}
+        .firstsection:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: .89;
+            background-size:cover;
+            background-position: center;
+            background-image:url("");
+        
+        }
+
+		.secondsection {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            
+		}
+        .secondsection:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: .84;
+			background-size:cover;
+			background-position: center;
+            background-image:url("");
+            
+        }
+    
+        .thirdsection {
+            height: 300px;
+            overflow:hidden;
+            position:relative;
+        }
+    
+        .thirdsection:before {
+            content: "";
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: .84;
+			background-size:cover;
+            background-image:url("")
+        }
+
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: rgb(255, 255, 255);
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+			
+		}
+
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.secondhalf {
+			width: 30%;
+		}
+
+		.secondhalf img {
+			width: 70%;
+			border: 4px solid rgb(176, 25, 25);
+			border-radius: 150px;
+			display: block;
+			margin: auto;
+		}
+
+		.text-big {
+			font-family:sans-serif;
+			font-weight:100;
+			font-size: 20px;
+            color: #000;
+            position: relative;
+            padding-bottom: 20px;
+		}
+
+		.text-small {
+			font-size: 18px;
+			text-align: center;
+			font-family: sans-serif;
+		}
+
+		.btn {
+			padding: 8px 20px;
+			margin: 7px 0;
+			border: 2px solid white;
+			border-radius: 8px;
+			background: none;
+			color: rgb(255, 255, 255);
+			cursor: pointer;
+		}
+
+		.btn-sm {
+			padding: 6px 10px;
+			vertical-align: middle;
+		}
+
+		.text-smallbtn {
+			padding: 8px;
+			margin: 5px 0;
+			border: 1px solid rgb(0, 0, 0);
+			border-radius: 9px;
+			background: none;
+			color: rgb(0, 0, 0);
+			cursor: pointer;
+			padding: 6px;
+			text-align: center;
+            height: fit-content;
+			width:fit-content;
+			left: 48%;
+			position:relative;
+		}
+
+		.section {
+			height: 400px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 90%;
+			margin: auto;
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.thumbnail img {
+			width: 250px;
+			border: 2px solid black;
+			border-radius: 26px;
+			margin-top: 19px;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 20px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: rgb(255, 255, 255);
+		}
+
+	</style>
+</head>
+
+<body>
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKb3xr7PQNNf1IfbT4XhspQ5aTHMCnFxzZQg&usqp=CAU">
+			</div>
+			<li><a href="#Home">Home</a></li>
+			<li><a href="#men">Men</a></li>
+			<li><a href="#women">Women</a></li>
+            <li><a href="#about">About Us</a></li>
+		</ul>
+		<div class="rightNav">
+			<input type="text" name="search" id="search">
+			<button class="btn btn-sm">Search</button>
+		</div>
+	</nav>
+
+    <div class="card">
+        <img src="https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2Fca%2F5e%2Fca5e3816f4a088a8d68f6f69d0431a3db172bd7e.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D" alt="Oversized T-Shirt" style="width:45%">
+        <h1>'Mint' Over-Sized T-Shirt</h1>
+        <p class="price">￡19.99</p>
+        <p>Mint Over-Sized T-Shirt to hide that sick pump at the gym..</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <section class="secondsection">
+        <div class="box-main">
+            <div class="firsthalf">
+                <h2 class="text-big" id="Sizes">Choose Your Size:</h2>
+                <p>
+                    <label for="cars">Choose a car:</label>
+                        <select name="cars" id="cars">
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="Extra Large">Extra Large</option>
+                    </select>
+                </p>
+    </section>
+
+	<footer class="background">
+		<p class="text-footer">
+			
+		</p>    
+
+	</footer>
+</body>
+
+</html>

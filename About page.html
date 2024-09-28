@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>About Page</title>
+	<link href="stylesheet" href="style.css" type="text/css">
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position:sticky;
+			overflow: hidden;
+			top: 0;
+			cursor: pointer;
+			height: 100px;
+		}
+
+		.background {
+			background: rgb(0, 0, 0);
+			background-blend-mode: darken;
+			background-size:cover;
+			background-position: center;
+			z-index: 1;
+		}
+
+		.nav-list {
+			width: 75%;
+			display: flex;
+			align-items: center;
+			font-size: large;
+		}
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 50px;
+			border-radius: 50px;
+		}
+
+		.nav-list li {
+			list-style: none; 
+			padding: 29px 30px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: rgb(255, 255, 255);
+			font-family: monospace;
+            
+		}
+
+		.nav-list li a:hover {
+			color: grey;
+		}
+
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+		#search {
+			padding: 5px;
+			font-size: 17px;
+			border: 2px solid grey;
+			border-radius: 9px;
+		}
+
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+        }
+
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: #464950e7;
+            color: rgb(243, 233, 233);
+        }
+
+        .container {
+            padding: 0 16px;
+        }
+
+        .container::after, .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .title {
+            color: grey;
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        @media screen and (max-width: 650px) {
+            .column {
+            width: 100%;
+            display: block;
+            }
+        }
+
+		.firstsection {
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        
+		}
+        .firstsection:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: .89;
+            background-size:cover;
+            background-position: center;
+            background-image:url("https://static.standard.co.uk/2022/03/15/13/PREVAYL.jpg");
+        
+        }
+
+		.secondsection {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            
+		}
+        .secondsection:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: .84;
+			background-size:cover;
+			background-position: center;
+            background-image:url("https://www.dahlie.com/on/demandware.static/-/Sites-dahlie-Library/default/dwc3a3e0e7/Stories/365/symbol-for-run/content-hero-1.jpg");
+            
+        }
+    
+        .thirdsection {
+            height: 300px;
+            overflow:hidden;
+            position:relative;
+        }
+    
+        .thirdsection:before {
+            content: "";
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: .84;
+			background-size:cover;
+            background-image:url("https://bidunart.com/wp-content/uploads/2020/06/FitnessSports013a-1024x683.jpg")
+        }
+
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: rgb(255, 255, 255);
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+			
+		}
+
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.secondhalf {
+			width: 30%;
+		}
+
+		.secondhalf img {
+			width: 70%;
+			border: 4px solid rgb(176, 25, 25);
+			border-radius: 150px;
+			display: block;
+			margin: auto;
+		}
+
+		.text-big {
+			font-family: 'Piazzolla', serif;
+			font-weight: bold;
+			font-size: 38px;
+;
+		
+		}
+
+		.text-small {
+			font-size: 18px;
+			text-align: center;
+			font-family: sans-serif;
+		}
+
+        h1 {
+            padding: 15px;
+            font-family: sans-serif;
+        }
+
+        p {
+            padding: 5px;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+
+		.btn {
+			padding: 8px 20px;
+			margin: 7px 0;
+			border: 2px solid white;
+			border-radius: 8px;
+			background: none;
+			color: rgb(255, 255, 255);
+			cursor: pointer;
+		}
+
+		.btn-sm {
+			padding: 6px 10px;
+			vertical-align: middle;
+		}
+
+		.text-smallbtn {
+			padding: 8px;
+			margin: 5px 0;
+			border: 1px solid white;
+			border-radius: 9px;
+			background: none;
+			color: rgb(255, 255, 255);
+			cursor: pointer;
+			padding: 6px;
+			height: fit-content;
+			width:fit-content;
+			left: 45%;
+			position:absolute ;
+			
+		}
+
+		.section {
+			height: 400px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 90%;
+			margin: auto;
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.thumbnail img {
+			width: 250px;
+			border: 2px solid black;
+			border-radius: 26px;
+			margin-top: 19px;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 20px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: rgb(255, 255, 255);
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKb3xr7PQNNf1IfbT4XhspQ5aTHMCnFxzZQg&usqp=CAU">
+			</div>
+			<li><a href="#Home">Home</a></li>
+			<li><a href="#men">Men</a></li>
+			<li><a href="#women">Women</a></li>
+            <li><a href="#about">About Us</a></li>
+		</ul>
+
+		<div class="rightNav">
+			<input type="text" name="search" id="search">
+			<button class="btn btn-sm">Search</button>
+		</div>
+	</nav>
+
+        <div class="about-section">
+            <h1>About Us Page</h1>
+            <p>This store is inspired by the late Body Builder Aziz "Zyzz" Sergeyevich Shavershian. </p>
+            <p>His vision was that everyone can get involved in the gym and appreciate it in every way possible just as he did.</p>
+            <p>The gym isn't just a hobby... No, it is a lifestyle that keeps on giving!</p>
+            <p>So in the memeory of Zyzz we designed this store to be accesible by all individuals acting as a gateway into our Home... The GYM.</p>
+            <P>"Everyone has a little bit of Zyzz in them" - Zyzz</P>
+            <h1>Long Live The Son of Zues</h1>
+            <img src="https://i.dailymail.co.uk/1s/2021/08/06/01/46347217-0-image-a-29_1628210611488.jpg" alt="Zyzz" width="500" height="300">
+            <p>1989 - 2011</p>
+        </div>
+
+
+	<footer class="background">
+		<p class="text-footer">
+			
+		</p>
+
+
+	</footer>
+</body>
+
+</html>
